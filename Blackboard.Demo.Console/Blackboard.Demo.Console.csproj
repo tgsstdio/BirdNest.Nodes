@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{210EFFE1-DE01-4ED0-AC81-C0528823FDEE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Blackboard.Demo.Console</RootNamespace>
+    <AssemblyName>Blackboard.Demo.Console</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug AnyCPU|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="CharacterInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Blackberry.csproj">
+      <Project>{EA9CBFFA-FFD8-4963-9A15-8C2B63727180}</Project>
+      <Name>Blackberry</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Brawler.Actions.unity\Brawler.Actions.csproj">
+      <Project>{97F61778-0A15-40A3-A00B-97AEF5BBE80C}</Project>
+      <Name>Brawler.Actions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Brawler.Input.unity\Brawler.Input.csproj">
+      <Project>{F96D785E-5AAF-4316-A72D-7C9DC32A75B0}</Project>
+      <Name>Brawler.Input</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Brawler.Simulation.unity\Brawler.Simulation.csproj">
+      <Project>{691B0C8F-7585-4C29-B7AB-E69518E25861}</Project>
+      <Name>Brawler.Simulation</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

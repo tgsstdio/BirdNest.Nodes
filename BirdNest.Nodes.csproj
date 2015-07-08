@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{EA9CBFFA-FFD8-4963-9A15-8C2B63727180}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BirdNest.Nodes</RootNamespace>
+    <AssemblyName>BirdNest.Nodes</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug AnyCPU|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Action.cs" />
+    <Compile Include="Branch.cs" />
+    <Compile Include="BuilderError.cs" />
+    <Compile Include="BuilderState.cs" />
+    <Compile Include="Condition.cs" />
+    <Compile Include="Decorator.cs" />
+    <Compile Include="EntireTreeNode.cs" />
+    <Compile Include="EntireTreeNodeEnumerator.cs" />
+    <Compile Include="EntireTreeNodeExaminer.cs" />
+    <Compile Include="Evaluation.cs" />
+    <Compile Include="INode.cs" />
+    <Compile Include="INodeExaminer.cs" />
+    <Compile Include="INodeValidator.cs" />
+    <Compile Include="INodeWalker.cs" />
+    <Compile Include="ITreeBuilder.cs" />
+    <Compile Include="Leaf.cs" />
+    <Compile Include="LeafExaminer.cs" />
+    <Compile Include="NodeWalker.cs" />
+    <Compile Include="NodeWalkerFrame.cs" />
+    <Compile Include="NullEnumerator.cs" />
+    <Compile Include="Parallel.cs" />
+    <Compile Include="ParallelEnumerator.cs" />
+    <Compile Include="ParallelExaminer.cs" />
+    <Compile Include="Result.cs" />
+    <Compile Include="Selector.cs" />
+    <Compile Include="SelectorEnumerator.cs" />
+    <Compile Include="SelectorExaminer.cs" />
+    <Compile Include="Sequence.cs" />
+    <Compile Include="SequenceEnumerator.cs" />
+    <Compile Include="SequenceExaminer.cs" />
+    <Compile Include="Tree.cs" />
+    <Compile Include="TreeBuilder.cs" />
+    <Compile Include="TreeBuilderFrame.cs" />
+    <Compile Include="PlanNode.cs" />
+    <Compile Include="PlanNodeList.cs" />
+    <Compile Include="Plan.cs" />
+    <Compile Include="UsePlanNode.cs" />
+    <Compile Include="UsePlanNodeEnumerator.cs" />
+    <Compile Include="UsePlanNodeExaminer.cs" />
+    <Compile Include="BlackboardTreeBuilder.cs" />
+    <Compile Include="IEntireTreeNode.cs" />
+    <Compile Include="BlackboardEntireTreeNode.cs" />
+    <Compile Include="IBlackboardNode.cs" />
+    <Compile Include="BlackboardAction.cs" />
+    <Compile Include="BlackboardSetter.cs" />
+    <Compile Include="Blackboard.cs" />
+    <Compile Include="BlackboardCondition.cs" />
+    <Compile Include="ExplicitTreeBuilder.cs" />
+    <Compile Include="IBlackBoardTreeBuilder.cs" />
+    <Compile Include="TransistentBlackboard.cs" />
+    <Compile Include="BlackboardNotCondition.cs" />
+    <Compile Include="FailedNode.cs" />
+    <Compile Include="SuccessNode.cs" />
+    <Compile Include="ITreeDictionary.cs" />
+    <Compile Include="TreeDictionary.cs" />
+    <Compile Include="IBlackboardParameter.cs" />
+    <Compile Include="StaticParameter.cs" />
+    <Compile Include="DependencyParameter.cs" />
+    <Compile Include="IBlackboardLinker.cs" />
+    <Compile Include="BlackboardLinker.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
