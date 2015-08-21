@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace BirdNest.Nodes
+﻿namespace BirdNest.Nodes
 {
 
 	public class EntireTreeNode : Decorator, IEntireTreeNode {

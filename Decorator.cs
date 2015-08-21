@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace BirdNest.Nodes
 {
 	public abstract class Decorator : INode

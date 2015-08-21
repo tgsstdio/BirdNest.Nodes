@@ -7,7 +7,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System;
 namespace BirdNest.Nodes
 {
 	public class BlackboardEntireTreeNode<T> : Decorator, IEntireTreeNode, IBlackboardNode<T>

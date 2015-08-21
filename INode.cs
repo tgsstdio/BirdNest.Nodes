@@ -1,5 +1,3 @@
-using System;
-
 namespace BirdNest.Nodes
 {
 	public interface INode

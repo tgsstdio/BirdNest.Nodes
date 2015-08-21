@@ -1,4 +1,3 @@
-using System;
 namespace BirdNest.Nodes
 {
 	public class BlackboardSetter<T> : Action, IBlackboardNode<T>

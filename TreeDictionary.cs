@@ -15,7 +15,7 @@ namespace BirdNest.Nodes
 {
 	public class TreeDictionary : ITreeDictionary
 	{
-		public Dictionary<Type, INode> mKnownTrees;
+		private readonly Dictionary<Type, INode> mKnownTrees;
 		public TreeDictionary ()
 		{
 			mKnownTrees = new Dictionary<Type, INode>();

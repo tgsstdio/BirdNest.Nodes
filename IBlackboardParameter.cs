@@ -7,7 +7,6 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System;
 namespace BirdNest.Nodes
 {
 	public interface IBlackboardParameter

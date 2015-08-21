@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>BirdNest.Nodes-PCL</id>
+    <version>1.1.0</version>
+    <authors>David Young</authors>
+    <owners>David Young</owners>
+    <licenseUrl>https://github.com/tgsstdio/BirdNest.Nodes/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/tgsstdio/BirdNest.Nodes</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>C# stack based (i.e. non-recursive) behavior tree implementation</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>behavior-tree C#</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+</package>
