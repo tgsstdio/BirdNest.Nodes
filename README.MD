@@ -2,7 +2,7 @@
 ---
 C# implementation of a stack based behaviour tree. The library traverses a tree
 non-recursively and therefore easier to debug & trace.
-# Example
+## Example
 ---
 
 ```C#
@@ -71,18 +71,18 @@ non-recursively and therefore easier to debug & trace.
 	walker.AddDependentBlackboard<EnemySituation, Enemy>((es) => {return es.Individual;});
 ```
 
-# Changelog
+## Changelog
 ---
-## Version 1.1.0 
-### 2015-08-22
-Replaced library with PCL version 4.0 (Profile328)
-Renamed Action type to Step because .NET already has a Action type
+### Version 1.1.0 
+#### 2015-08-22
+ - Replaced library with PCL version 4.0 (Profile328) 
+ - Renamed Action type to Step because .NET already has a Action type
 
-## Version 1.0.0 
-### 2015-07-08
-Initial check in
+### Version 1.0.0 
+#### 2015-07-08
+ - Initial check in
 
-# LICENSE 
+## LICENSE 
 ---
 The MIT License (MIT)
 
