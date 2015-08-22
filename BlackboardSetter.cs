@@ -1,6 +1,6 @@
 namespace BirdNest.Nodes
 {
-	public class BlackboardSetter<T> : Action, IBlackboardNode<T>
+	public class BlackboardSetter<T> : Step, IBlackboardNode<T>
 		where T : class
 	{
 		private System.Action<T> mAction;

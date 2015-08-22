@@ -65,14 +65,14 @@ namespace BirdNest.Nodes
 			return this;
 		}
 
-		public BlackboardTreeBuilder<T>  Action (System.Func<T, Result> func)
+		public BlackboardTreeBuilder<T>  Step (Func<T, Result> func)
 		{
 			var p = new BlackboardAction<T>(func);
 			this.TreeBuilder.AddNode(p);
 			return this;
 		}
 
-		public BlackboardTreeBuilder<T>  Set (System.Action<T> func)
+		public BlackboardTreeBuilder<T>  Set (Action<T> func)
 		{
 			var p = new BlackboardSetter<T>(func);
 			this.TreeBuilder.AddNode(p);
@@ -142,15 +142,16 @@ namespace BirdNest.Nodes
 
 		public BlackboardTreeBuilder<T> UseStub<TAction, S>()
 			where S : class
-			where TAction : Action, IBlackboardNode<S>
+			where TAction : Step, IBlackboardNode<S>
 		{
 			INode found = this.NodeResolver.Resolve<S, TAction>();
+			mDependencies.Add (typeof(S));
 			this.TreeBuilder.AddNode(found);			
 			return this;
 		}
 
 		public BlackboardTreeBuilder<T> UseStub<TAction>()
-			where TAction : Action, IBlackboardNode<T>
+			where TAction : Step, IBlackboardNode<T>
 		{
 			INode found = this.NodeResolver.Resolve<T, TAction>();
 			this.TreeBuilder.AddNode(found);			
@@ -158,7 +159,7 @@ namespace BirdNest.Nodes
 		}
 
 		public INode BuildAndRegisterAs<TAction>()
-			where TAction : Action, IBlackboardNode<T>
+			where TAction : Step, IBlackboardNode<T>
 		{
 			Tree compiledTree = this.TreeBuilder.Build();
 			var found = this.NodeResolver.AddStub<T, TAction>(compiledTree);	

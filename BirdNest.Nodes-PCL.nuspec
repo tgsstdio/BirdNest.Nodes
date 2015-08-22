@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/tgsstdio/BirdNest.Nodes</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>C# stack based (i.e. non-recursive) behavior tree implementation</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <releaseNotes>Replaced library with PCL version 4.0 (Profile328)</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>behavior-tree C#</tags>
     <dependencies>

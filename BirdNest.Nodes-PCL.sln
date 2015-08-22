@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirdNest.Nodes-PCL", "BirdNest.Nodes-PCL.csproj", "{5F7835C8-799E-446A-B06B-485197D6D1AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleOne", "Samples\ExampleOne\ExampleOne.csproj", "{430DBE79-4275-43AA-8CC6-F729C02E02C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -11,6 +13,14 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{430DBE79-4275-43AA-8CC6-F729C02E02C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{430DBE79-4275-43AA-8CC6-F729C02E02C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{430DBE79-4275-43AA-8CC6-F729C02E02C6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{430DBE79-4275-43AA-8CC6-F729C02E02C6}.Debug|x86.Build.0 = Debug|Any CPU
+		{430DBE79-4275-43AA-8CC6-F729C02E02C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{430DBE79-4275-43AA-8CC6-F729C02E02C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{430DBE79-4275-43AA-8CC6-F729C02E02C6}.Release|x86.ActiveCfg = Release|Any CPU
+		{430DBE79-4275-43AA-8CC6-F729C02E02C6}.Release|x86.Build.0 = Release|Any CPU
 		{5F7835C8-799E-446A-B06B-485197D6D1AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5F7835C8-799E-446A-B06B-485197D6D1AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F7835C8-799E-446A-B06B-485197D6D1AE}.Debug|x86.ActiveCfg = Debug|x86

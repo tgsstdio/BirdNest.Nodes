@@ -21,17 +21,18 @@ namespace BirdNest.Nodes
 
 		public void Assign(INode node)
 		{
-			if (node is IBlackboardNode<T>)
+			var blackboardNode = node as IBlackboardNode<T>;
+			if (blackboardNode != null)
 			{
-				IBlackboardNode<T> specificNode = node as IBlackboardNode<T>;
-				specificNode.Board = this.Board;
+				Board = blackboardNode.Board;
 			}
 		}
 
 		public void Assign<TParent> (IBlackboardNode<TParent> node) where TParent : class
 		{
-			if (this is StaticParameter<TParent>) {
-				node.Board = this.Board as Blackboard<TParent>;
+			var compatible = this as StaticParameter<TParent>;
+			if (compatible != null) {
+				node.Board = compatible.Board;
 			}
 		}
 	}

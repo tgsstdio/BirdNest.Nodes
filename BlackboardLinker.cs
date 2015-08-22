@@ -5,7 +5,7 @@ namespace BirdNest.Nodes
 {
 	public class BlackboardLinker : IBlackboardLinker
 	{
-		private List<IBlackboardParameter> mInstances;
+		private readonly List<IBlackboardParameter> mInstances;
 		public BlackboardLinker ()
 		{
 			mInstances = new List<IBlackboardParameter> ();
@@ -35,7 +35,10 @@ namespace BirdNest.Nodes
 
 		public void Link<TParent> (IBlackboardNode<TParent> node) where TParent : class
 		{
-
+			foreach (var param in mInstances)
+			{
+				param.Assign<TParent> (node);
+			}
 		}
 
 		#endregion

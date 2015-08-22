@@ -10,7 +10,7 @@
 using System;
 namespace BirdNest.Nodes
 {
-	public class BlackboardAction<T> : Action, IBlackboardNode<T>
+	public class BlackboardAction<T> : Step, IBlackboardNode<T>
 		where T : class
 	{
 		private Func<T, Result> mAction;

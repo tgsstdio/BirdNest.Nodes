@@ -134,31 +134,31 @@ namespace BirdNest.Nodes
 
 		public ITreeBuilder Sequence()
 		{
-			Sequence s = new Sequence();
+			var s = new Sequence();
 
 			return AddNode(s);
 		}
 
 		public ITreeBuilder Selector()
 		{
-			Selector s = new Selector();
+			var s = new Selector();
 
 			return AddNode(s);
 		}
 
-		public ITreeBuilder AddAction(Action act)
+		public ITreeBuilder AddStep(Step act)
 		{
 			return AddNode(act);
 		}
 
 		public ITreeBuilder AddDecorator (Decorator dec)
 		{
-			return this;
+			throw new NotImplementedException ();
 		}
 
 		public ITreeBuilder AddCondition (Condition con)
 		{
-			return this;
+			throw new NotImplementedException ();
 		}
 
 		public ITreeBuilder Begin()

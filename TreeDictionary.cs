@@ -23,19 +23,19 @@ namespace BirdNest.Nodes
 
 		#region ITreeDictionary implementation
 
-		public void Register<T, TParent> (TParent stub) where T : class where TParent : Action, IBlackboardNode<T>
+		public void Register<T, TParent> (TParent stub) where T : class where TParent : Step, IBlackboardNode<T>
 		{
 			mKnownTrees.Add(typeof(TParent), stub);
 		}
 
-		public INode AddStub<T, TParent> (Tree treeNode) where T : class where TParent : Action, IBlackboardNode<T>
+		public INode AddStub<T, TParent> (Tree treeNode) where T : class where TParent : Step, IBlackboardNode<T>
 		{
 			var stub = new BlackboardEntireTreeNode<T>(treeNode);
 			mKnownTrees.Add(typeof(TParent), stub);
 			return stub;
 		}
 
-		public INode Resolve<T, TParent> () where T : class where TParent : Action
+		public INode Resolve<T, TParent> () where T : class where TParent : Step
 		{
 			return mKnownTrees[typeof(TParent)];
 		}

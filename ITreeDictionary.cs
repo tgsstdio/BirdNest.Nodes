@@ -14,13 +14,13 @@ namespace BirdNest.Nodes
 	{
 		void Register<T, TParent> (TParent stub)
 			where T : class
-			where TParent : Action, IBlackboardNode<T>;
+			where TParent : Step, IBlackboardNode<T>;
 		INode AddStub<T, TParent>(Tree treeNode)
 			where T : class
-			where TParent : Action, IBlackboardNode<T>;
+			where TParent : Step, IBlackboardNode<T>;
 		INode Resolve<T, TParent>()
 			where T : class
-			where TParent : Action;
+			where TParent : Step;
 
 	}
 }

@@ -36,12 +36,13 @@ namespace BirdNest.Nodes
 
 		public void Assign (INode node)
 		{
-			if (node is IBlackboardNode<TChild>)
+			var blackboardNode = node as IBlackboardNode<TChild>;
+			if (blackboardNode != null)
 			{
 				mLinker.Link<TParent> (this);
 				mChildBoard.Context = this.mInitFunc(this.Board.Context);
 
-				IBlackboardNode<TChild> specificNode = node as IBlackboardNode<TChild>;
+				IBlackboardNode<TChild> specificNode = blackboardNode;
 				specificNode.Board = this.mChildBoard;
 			}	
 		}
