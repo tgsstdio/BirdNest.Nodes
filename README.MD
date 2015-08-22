@@ -1,9 +1,7 @@
 # BirdNest.Nodes
 ---
-
 C# implementation of a stack based behaviour tree. The library traverses a tree
 non-recursively and therefore easier to debug & trace.
-
 # Example
 ---
 
@@ -25,7 +23,7 @@ non-recursively and therefore easier to debug & trace.
 		public Enemy Individual;
 	}
 
-	public abstract class BaseEnemyAI : Action, IBlackboardNode<Enemy>
+	public abstract class BaseEnemyAI : Step, IBlackboardNode<Enemy>
 	{
 		#region IBlackboardNode implementation
 		public Blackboard<Enemy> Board { get; set; }
@@ -45,7 +43,7 @@ non-recursively and therefore easier to debug & trace.
 					.IsTrue((e) => e.HasTarget())
 					.Selector ()
 					.Begin ()
-						.Action((e) => e.SelectTarget())
+						.Step((e) => e.SelectTarget())
 					.End ()
 				.End ()
 			.Selector()
@@ -53,11 +51,11 @@ non-recursively and therefore easier to debug & trace.
 					.IsTrue((e) => e.WithinDistance())
 					.Selector ()
 					.Begin ()
-						.Action((e) => e.MoveTowards())
+						.Step((e) => e.MoveTowards())
 					.End ()
 				.End()
 			.End ()
-			.Action ((e) => e.HitTarget())
+			.Step ((e) => e.HitTarget())
 		.End ()
 	.BuildAndRegisterAs<BaseEnemyAI>();
 
@@ -78,6 +76,7 @@ non-recursively and therefore easier to debug & trace.
 ## Version 1.1.0 
 ### 2015-08-22
 Replaced library with PCL version 4.0 (Profile328)
+Renamed Action type to Step because .NET already has a Action type
 
 ## Version 1.0.0 
 ### 2015-07-08
@@ -85,7 +84,6 @@ Initial check in
 
 # LICENSE 
 ---
-
 The MIT License (MIT)
 
 Copyright (c) 2015 David Young
@@ -104,6 +102,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+LIABILITY, WHETHER IN AN Step OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
